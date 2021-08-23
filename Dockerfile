@@ -1,27 +1,27 @@
-# manage python version and buffering
+# define a imagem base
 FROM python:3.9-alpine
 
+# evita que a saída do python no terminal seja bufferizada
 ENV PYTHONUNBUFFERED 1
 
-# install postgres dependencies
+# instalar dependências do postgres
 RUN apk --update add \
     build-base \
     postgresql \
     postgresql-dev \
     libpq \
-    # pillow dependencies
+    # dependências do pillow
     jpeg-dev \
     zlib-dev
 
-# create workdir
+# cria o diretório de trabalho
 WORKDIR /code
 
-# copy requirements
-ADD requirements.txt /code/
+# as instruções ADD, COPY, CMD, ENTRYPOINT ou RUN serão executadas no diretório de trabalho definido anteriormente
 
-# install dependecies
-RUN pip install --upgrade pip
-RUN pip install -r requirements.txt
-
-# copy projects
+# copia o projeto para o diretório de trabalho
 COPY . /code/
+
+# atualizar o pip e instalar as dependências do projeto
+RUN pip install --upgrade pip
+RUN pip install -r requirements/dev-requirements.txt
