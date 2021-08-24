@@ -1,0 +1,41 @@
+name: Compilação
+
+on:
+  push:
+    branches:
+      - main
+      - development
+  pull_request:
+    branches:
+      - main
+      - development
+
+jobs:
+  build:
+    name: Verificar Compilação
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Conferir repositório
+        uses: actions/checkout@v2
+
+      - name: Criar arquivo .env
+        run: |
+          touch .env
+          echo SECRET_KEY=secret_key >> .env
+          echo DEBUG=True >> .env
+          echo POSTGRES_HOST=db >> .env
+          echo POSTGRES_DB=postgres >> .env
+          echo POSTGRES_USER=postgres >> .env
+          echo POSTGRES_PASSWORD=password >> .env
+          echo POSTGRES_PORT=5432 >> .env
+          cat .env
+
+      - name: Executar docker-compose up
+        run: sudo docker-compose up -d
+
+      - name: Aguardar o docker-compose
+        run: sleep 120
+
+      - name: Verificar o server
+        run: curl http://0.0.0.0:8001/
