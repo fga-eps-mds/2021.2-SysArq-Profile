@@ -1,0 +1,12 @@
+[run]
+    source = .
+    omit =
+        manage.py
+        project/asgi.py
+        project/wsgi.py
+        *_tests.py
+        **/migrations/*.py
+
+[report]
+    fail_under = 90
+    show_missing = True
