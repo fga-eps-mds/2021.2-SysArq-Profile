@@ -1,0 +1,10 @@
+# .env
+#to get your secret key run: 
+#python -c 'from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())'
+SECRET_KEY = YOUR_SECRET_KEY
+
+POSTGRES_HOST=db
+POSTGRES_DB=postgres
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=password
+POSTGRES_PORT=5432
