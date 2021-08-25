@@ -4,6 +4,7 @@
 
 # API de Gerenciamento de Usuários do SysArq
 
+[![codecov](https://codecov.io/gh/fga-eps-mds/2021.1-PC-GO1-Profile/branch/main/graph/badge.svg?token=ZHK3M2DEQ9)](https://codecov.io/gh/fga-eps-mds/2021.1-PC-GO1-Profile)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=fga-eps-mds_2021.1-PC-GO1-Profile&metric=alert_status)](https://sonarcloud.io/dashboard?id=fga-eps-mds_2021.1-PC-GO1-Profile)
 [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=fga-eps-mds_2021.1-PC-GO1-Profile&metric=security_rating)](https://sonarcloud.io/dashboard?id=fga-eps-mds_2021.1-PC-GO1-Profile)
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=fga-eps-mds_2021.1-PC-GO1-Profile&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=fga-eps-mds_2021.1-PC-GO1-Profile)
@@ -46,7 +47,7 @@ Esse microsserviço é responsável pelo *CRUD* ([veja a definição](https://de
       sudo docker exec -ti 20211-pc-go1-profile_web_1 sh
    ```
 
-2. Utilize o pytest. Por exemplo:
+2. Utilize o ***pytest***. Por exemplo:
    ```
       pytest --cov
    ```
@@ -59,7 +60,7 @@ Esse microsserviço é responsável pelo *CRUD* ([veja a definição](https://de
       sudo docker exec -ti 20211-pc-go1-profile_web_1 sh
    ```
 
-2. Utilize o flake8. Por exemplo:
+2. Utilize o ***flake8***. Por exemplo:
    ```
       flake8
    ```
