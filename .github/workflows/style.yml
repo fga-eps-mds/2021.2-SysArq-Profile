@@ -18,6 +18,8 @@ jobs:
     steps:
       - name: Conferir repositório
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0  # Evita clones rasos
 
       - name: Criar arquivo .env
         run: |

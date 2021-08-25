@@ -19,10 +19,13 @@ services:
   test:
     build: .
 
-    command: pytest --cov --cov-report=xml
+    command: sh -c "pytest --cov --cov-report xml:./coverage.xml"
 
     env_file:
       - ./.env
+
+    volumes:
+      - .:/code
 
     depends_on:
       db:

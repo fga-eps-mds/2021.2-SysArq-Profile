@@ -18,6 +18,8 @@ jobs:
     steps:
       - name: Conferir repositório
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0  # Evita clones rasos
 
       - name: Criar arquivo .env
         run: |
@@ -33,3 +35,9 @@ jobs:
 
       - name: Executar pytest  
         run: sudo docker-compose -f .github/docker-compose.actions.yml --project-directory . run test
+
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
