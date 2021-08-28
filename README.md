@@ -40,29 +40,17 @@ Esse microsserviço é responsável pelo *CRUD* ([veja a definição](https://de
 
 4. Acesse [http://0.0.0.0:8001/](http://0.0.0.0:8001) no navegador. 
 
-### Testes
+### Testes e Verificação de Estilo
 
-1. Acesse o container:
+-  Para **testar** a aplicação, utilize o ***pytest***. Por exemplo:
    ```
-      sudo docker exec -ti 20211-pc-go1-profile_web_1 sh
-   ```
-
-2. Utilize o ***pytest***. Por exemplo:
-   ```
-      pytest --cov
+      sudo docker-compose run web pytest --cov
    ```
    **Observação**: Só serão aceitas contribuições com 90% de cobertura de código.
 
-### Verificação de Estilo
-
-1. Acesse o container:
+- Para **verificar o estilo de código** da aplicação, utilize o ***flake8***. Por exemplo:
    ```
-      sudo docker exec -ti 20211-pc-go1-profile_web_1 sh
-   ```
-
-2. Utilize o ***flake8***. Por exemplo:
-   ```
-      flake8
+      sudo docker-compose run web flake8
    ```
    **Observação**: Só serão aceitas contribuições com o estilo correto.
 

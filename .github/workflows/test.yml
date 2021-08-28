@@ -4,11 +4,11 @@ on:
   push:
     branches:
       - main
-      - development
+      - devel
   pull_request:
     branches:
       - main
-      - development
+      - devel
 
 jobs:
   test:
@@ -34,7 +34,7 @@ jobs:
           cat .env
 
       - name: Executar pytest  
-        run: sudo docker-compose -f .github/docker-compose.actions.yml --project-directory . run test
+        run: sudo docker-compose run web pytest --cov --cov-report xml:./coverage.xml
 
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
