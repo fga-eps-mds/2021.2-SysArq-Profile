@@ -54,6 +54,8 @@ Esse microsserviço é responsável pelo *CRUD* ([veja a definição](https://de
    ```
    **Observação**: Só serão aceitas contribuições com o estilo correto.
 
+**ATENÇÃO**: Execute os comandos dentro da **`pasta`** do repositório.
+
 ## Documentação
 
 `TO-DO`
