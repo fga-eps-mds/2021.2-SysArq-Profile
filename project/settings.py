@@ -31,6 +31,8 @@ DEBUG = os.environ.get('DEBUG')
 
 ALLOWED_HOSTS = ['0.0.0.0']
 
+CORS_ALLOWED_ORIGINS = ['http://localhost:3000']
+
 
 # Application definition
 
@@ -43,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'profile_app',
+    "corsheaders"
 ]
 
 MIDDLEWARE = [
@@ -53,6 +56,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware'
 ]
 
 ROOT_URLCONF = 'project.urls'
