@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   db:
-    image: "postgres:11-alpine"
+    image: postgres:11-alpine
 
     env_file:
       - ./.env
@@ -26,6 +26,8 @@ services:
 
     volumes:
       - .:/code
+
+      # o volume garante que as alterações realizadas no projeto sejam propagadas no container
 
     ports:
       - "8001:8001"
