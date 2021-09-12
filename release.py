@@ -144,7 +144,7 @@ if __name__ == "__main__":
         f"{now.day:02d}-{now.month:02d}-" + str(now.year) + f"-{now.hour:02d}"
     )
 
-    analytics_path = "fga-eps-mds-2021_1-PC-GO1-Archives-" + new_tag.replace(".", "_") + "-" + data_release + ".json"
+    analytics_path = "fga-eps-mds-2021_1-PC-GO1-Profile-" + new_tag.replace(".", "_") + "-" + data_release + ".json"
 
     with open(analytics_path, "w") as file:
         json.dump(analytics, file)
@@ -161,7 +161,7 @@ if __name__ == "__main__":
         "cp " + analytics_path + " target\n" +
         "cd target\n" +
         "git add " + analytics_path + "\n"
-        "git commit -m \"Adiciona Métricas da Release " + new_tag + " do Archives\"\n"
+        "git commit -m \"Adiciona Métricas da Release " + new_tag + " do Profile\"\n"
     )
 
     doc_update_sh = open("doc_update.sh", "w")
