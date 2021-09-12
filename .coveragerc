@@ -6,6 +6,7 @@
         project/wsgi.py
         *_tests.py
         **/migrations/*.py
+        release.py
 
 [report]
     fail_under = 90

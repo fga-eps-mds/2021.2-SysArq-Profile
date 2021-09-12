@@ -14,7 +14,7 @@ if __name__ == "__main__":
     contributors = []
 
     pr_commits = requests.get(
-        "https://api.github.com/repos/fga-eps-mds/2021.1-PC-GO1-Profile/pulls/" + 
+        "https://api.github.com/repos/fga-eps-mds/2021.1-PC-GO1-Profile/pulls/" +
         pr_number + "/commits", auth=requests.auth.HTTPBasicAuth(user, token)
     )
 
@@ -30,7 +30,7 @@ if __name__ == "__main__":
     pr_body_text = ""
 
     for line in pr_body.readlines(): pr_body_text = pr_body_text + line
-    
+
     pr_body.close()
 
     pr_issues_numbers = [
@@ -38,7 +38,7 @@ if __name__ == "__main__":
         for pr_issue_number in re.findall(r"\[#\d+\]", pr_body_text)
     ]
 
-    topics = []    
+    topics = []
 
     try:
         for pr_issue_number in pr_issues_numbers:
@@ -111,7 +111,7 @@ if __name__ == "__main__":
         if topics != []:
             changelog.writelines("\n## " + random.choice(icon_c) + " Alterações\n")
 
-    else:   
+    else:
         raise Exception("Invalid Release Type.")
 
     if len(topics) != 0:
@@ -144,13 +144,17 @@ if __name__ == "__main__":
         f"{now.day:02d}-{now.month:02d}-" + str(now.year) + f"-{now.hour:02d}"
     )
 
-    analytics_path = "fga-eps-mds-2021_1-PC-GO1-Profile-" + new_tag.replace(".", "_") + "-" + data_release + ".json"
+    analytics_path = (
+        "fga-eps-mds-2021_1-PC-GO1-Profile-"
+        + new_tag.replace(".", "_") + "-" + data_release + ".json"
+    )
 
     with open(analytics_path, "w") as file:
         json.dump(analytics, file)
-    
+
     command = (
-        "gh release create " + new_tag + " '" + analytics_path + "#Métricas SonarCloud (json)' -F CHANGELOG.md -t " + new_tag
+        "gh release create " + new_tag + " '" + analytics_path +
+        "#Métricas SonarCloud (json)' -F CHANGELOG.md -t " + new_tag
     )
 
     create_release_sh = open("create_release.sh", "w")
