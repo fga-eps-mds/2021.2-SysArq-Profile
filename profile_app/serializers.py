@@ -7,7 +7,7 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = User
         fields = ['username', 'first_name', 'last_name', 'cpf', 'password']
-        extra_kwargs = {'password' : {'write_only': True}}
+        extra_kwargs = {'password': {'write_only': True}}
 
     def create(self, data):
         password = data.pop('password', None)
