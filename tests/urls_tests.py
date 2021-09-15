@@ -1,5 +1,4 @@
 import pytest
-import json
 from rest_framework.test import APIClient
 
 
@@ -20,5 +19,3 @@ class TestUserEndpoints:
             '/users/register/', data=data,
             header={"Content-Type": "application/json"})
         assert response.status_code == 201
-    
-
