@@ -1,21 +1,24 @@
 import pytest
 import json
-
-from model_bakery import baker
-
-from django.contrib.auth.models import User
 from rest_framework.test import APIClient
 
 
 @pytest.mark.django_db(transaction=False)
 class TestUserEndpoints:
 
-    def test_list(self):
-        baker.make(User, _quantity=3)
+    def test_create(self):
+        data = {
+            "username": "test",
+            "first_name": "test",
+            "last_name": "test",
+            "cpf": "11111111111",
+            "password": "pswd"
+        }
 
         api_client = APIClient()
+        response = api_client.post(
+            '/users/register/', data=data,
+            header={"Content-Type": "application/json"})
+        assert response.status_code == 201
+    
 
-        response = api_client.get('/users/')
-
-        assert response.status_code == 200
-        assert len(json.loads(response.content)) == 3
