@@ -1,0 +1,9 @@
+build:
+    docker:
+      web: Dockerfile
+release:
+    image: web
+    command:
+        - ./bash_file.sh
+run:
+    web: python manage.py runserver 0.0.0.0:$PORT
