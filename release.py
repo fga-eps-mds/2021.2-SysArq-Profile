@@ -18,7 +18,8 @@ if __name__ == "__main__":
     
         pr_commits = requests.get(
             "https://api.github.com/repos/fga-eps-mds/2021.1-PC-GO1-Profile/pulls/" +
-            pr_number + "/commits", auth=requests.auth.HTTPBasicAuth(user, token)
+            pr_number + "/commits", params=payload,
+            auth=requests.auth.HTTPBasicAuth(user, token)
         )
 
         pr_commits_json = pr_commits.json()
