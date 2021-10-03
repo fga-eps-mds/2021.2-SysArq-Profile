@@ -26,7 +26,7 @@ if __name__ == "__main__":
         if len(pr_commits_json) == 0: break
 
         try:
-            for pr_commit in pr_commits_json():
+            for pr_commit in pr_commits_json:
                 contributor = pr_commit["author"]["login"]
                 contributors.append(contributor) if contributor not in contributors else None
         except:
