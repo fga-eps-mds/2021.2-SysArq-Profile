@@ -58,4 +58,5 @@ Esse microsserviço é responsável pelo *CRUD* ([veja a definição](https://de
 
 ## Documentação
 
-`TO-DO`
+### Como contribuir
+- Leia o [guia de contribuição](CONTRIBUTING.md).
