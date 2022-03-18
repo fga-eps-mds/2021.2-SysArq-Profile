@@ -4,7 +4,7 @@
 
 # API de Gerenciamento de Usuários do SysArq
 
-[![codecov](https://codecov.io/gh/fga-eps-mds/2021.1-PC-GO1-Profile/branch/main/graph/badge.svg?token=ZHK3M2DEQ9)](https://codecov.io/gh/fga-eps-mds/2021.1-PC-GO1-Profile)
+[![codecov](https://codecov.io/gh/fga-eps-mds/2021.2-SysArq-Profile/branch/main/graph/badge.svg?token=CVD5NRJMN5)](https://codecov.io/gh/fga-eps-mds/2021.2-SysArq-Profile)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=fga-eps-mds_2021.2-SysArq-Profile&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=fga-eps-mds_2021.2-SysArq-Profile)
 [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=fga-eps-mds_2021.2-SysArq-Profile&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=fga-eps-mds_2021.2-SysArq-Profile)
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=fga-eps-mds_2021.2-SysArq-Profile&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=fga-eps-mds_2021.2-SysArq-Profile)
@@ -17,9 +17,9 @@
 [![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=fga-eps-mds_2021.2-SysArq-Profile&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=fga-eps-mds_2021.2-SysArq-Profile)
 [![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=fga-eps-mds_2021.2-SysArq-Profile&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=fga-eps-mds_2021.2-SysArq-Profile)
 
-A API de Gerenciamento de Usuários do *SysArq* compõe a arquitetura de microsserviços do sistema *[SysArq](https://fga-eps-mds.github.io/2021.2-SysArq/)*.
+A API de Gerenciamento de Arquivos do *SysArq* compõe a arquitetura de microsserviços do sistema *[SysArq](https://fga-eps-mds.github.io/2021-2-SysArq-Doc/)*.
 
-Esse microsserviço é responsável pelo *CRUD* ([veja a definição](https://developer.mozilla.org/pt-BR/docs/Glossary/CRUD)), autenticação e gerenciamento de permissões de usuário da aplicação. <!--**[Saiba mais](https://fga-eps-mds.github.io/2021.1-PC-GO1/documentation/)**-->
+Esse microsserviço é responsável pelo *CRUD* ([veja a definição](https://developer.mozilla.org/pt-BR/docs/Glossary/CRUD)), autenticação e gerenciamento de permissões de usuário da aplicação. **[Saiba mais](https://fga-eps-mds.github.io/2021-2-SysArq-Doc/documentation/)**
 
 ## Execução
 
