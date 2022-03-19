@@ -1,25 +1,25 @@
-[![Build](https://github.com/fga-eps-mds/2021.1-PC-GO1-Profile/workflows/Compilação/badge.svg)](https://github.com/fga-eps-mds/2021.1-PC-GO1-Profile/actions/workflows/build.yml)
-[![Style](https://github.com/fga-eps-mds/2021.1-PC-GO1-Profile/workflows/Estilo/badge.svg)](https://github.com/fga-eps-mds/2021.1-PC-GO1-Profile/actions/workflows/style.yml)
-[![Tests](https://github.com/fga-eps-mds/2021.1-PC-GO1-Profile/workflows/Testes/badge.svg)](https://github.com/fga-eps-mds/2021.1-PC-GO1-Profile/actions/workflows/test.yml)
+[![Build](https://github.com/fga-eps-mds/2021.2-SysArq-Profile/workflows/Compilação/badge.svg)](https://github.com/fga-eps-mds/2021.2-SysArq-Profile/actions/workflows/build.yml)
+[![Style](https://github.com/fga-eps-mds/2021.2-SysArq-Profile/workflows/Estilo/badge.svg)](https://github.com/fga-eps-mds/2021.2-SysArq-Profile/actions/workflows/style.yml)
+[![Tests](https://github.com/fga-eps-mds/2021.2-SysArq-Profile/workflows/Testes/badge.svg)](https://github.com/fga-eps-mds/2021.2-SysArq-Profile/actions/workflows/test.yml)
 
 # API de Gerenciamento de Usuários do SysArq
 
-[![codecov](https://codecov.io/gh/fga-eps-mds/2021.1-PC-GO1-Profile/branch/main/graph/badge.svg?token=ZHK3M2DEQ9)](https://codecov.io/gh/fga-eps-mds/2021.1-PC-GO1-Profile)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=fga-eps-mds_2021.1-PC-GO1-Profile&metric=alert_status)](https://sonarcloud.io/dashboard?id=fga-eps-mds_2021.1-PC-GO1-Profile)
-[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=fga-eps-mds_2021.1-PC-GO1-Profile&metric=security_rating)](https://sonarcloud.io/dashboard?id=fga-eps-mds_2021.1-PC-GO1-Profile)
-[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=fga-eps-mds_2021.1-PC-GO1-Profile&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=fga-eps-mds_2021.1-PC-GO1-Profile)
-[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=fga-eps-mds_2021.1-PC-GO1-Profile&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=fga-eps-mds_2021.1-PC-GO1-Profile)
+[![codecov](https://codecov.io/gh/fga-eps-mds/2021.2-SysArq-Profile/branch/main/graph/badge.svg?token=CVD5NRJMN5)](https://codecov.io/gh/fga-eps-mds/2021.2-SysArq-Profile)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=fga-eps-mds_2021.2-SysArq-Profile&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=fga-eps-mds_2021.2-SysArq-Profile)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=fga-eps-mds_2021.2-SysArq-Profile&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=fga-eps-mds_2021.2-SysArq-Profile)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=fga-eps-mds_2021.2-SysArq-Profile&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=fga-eps-mds_2021.2-SysArq-Profile)
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=fga-eps-mds_2021.2-SysArq-Profile&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=fga-eps-mds_2021.2-SysArq-Profile)
 
-[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=fga-eps-mds_2021.1-PC-GO1-Profile&metric=bugs)](https://sonarcloud.io/dashboard?id=fga-eps-mds_2021.1-PC-GO1-Profile)
-[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=fga-eps-mds_2021.1-PC-GO1-Profile&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=fga-eps-mds_2021.1-PC-GO1-Profile)
-[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=fga-eps-mds_2021.1-PC-GO1-Profile&metric=code_smells)](https://sonarcloud.io/dashboard?id=fga-eps-mds_2021.1-PC-GO1-Profile)
-[![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=fga-eps-mds_2021.1-PC-GO1-Profile&metric=sqale_index)](https://sonarcloud.io/dashboard?id=fga-eps-mds_2021.1-PC-GO1-Profile)
-[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=fga-eps-mds_2021.1-PC-GO1-Profile&metric=ncloc)](https://sonarcloud.io/dashboard?id=fga-eps-mds_2021.1-PC-GO1-Profile)
-[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=fga-eps-mds_2021.1-PC-GO1-Profile&metric=duplicated_lines_density)](https://sonarcloud.io/dashboard?id=fga-eps-mds_2021.1-PC-GO1-Profile)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=fga-eps-mds_2021.2-SysArq-Profile&metric=bugs)](https://sonarcloud.io/summary/new_code?id=fga-eps-mds_2021.2-SysArq-Profile)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=fga-eps-mds_2021.2-SysArq-Profile&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=fga-eps-mds_2021.2-SysArq-Profile)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=fga-eps-mds_2021.2-SysArq-Profile&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=fga-eps-mds_2021.2-SysArq-Profile)
+[![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=fga-eps-mds_2021.2-SysArq-Profile&metric=sqale_index)](https://sonarcloud.io/summary/new_code?id=fga-eps-mds_2021.2-SysArq-Profile)
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=fga-eps-mds_2021.2-SysArq-Profile&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=fga-eps-mds_2021.2-SysArq-Profile)
+[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=fga-eps-mds_2021.2-SysArq-Profile&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=fga-eps-mds_2021.2-SysArq-Profile)
 
-A API de Gerenciamento de Usuários do *SysArq* compõe a arquitetura de microsserviços do sistema *[SysArq](https://fga-eps-mds.github.io/2021.1-PC-GO1/)*.
+A API de Gerenciamento de Arquivos do *SysArq* compõe a arquitetura de microsserviços do sistema *[SysArq](https://fga-eps-mds.github.io/2021-2-SysArq-Doc/)*.
 
-Esse microsserviço é responsável pelo *CRUD* ([veja a definição](https://developer.mozilla.org/pt-BR/docs/Glossary/CRUD)), autenticação e gerenciamento de permissões de usuário da aplicação. **[Saiba mais](https://fga-eps-mds.github.io/2021.1-PC-GO1/documentation/)**
+Esse microsserviço é responsável pelo *CRUD* ([veja a definição](https://developer.mozilla.org/pt-BR/docs/Glossary/CRUD)), autenticação e gerenciamento de permissões de usuário da aplicação. **[Saiba mais](https://fga-eps-mds.github.io/2021-2-SysArq-Doc/documentation/)**
 
 ## Execução
 
