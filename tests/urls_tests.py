@@ -22,3 +22,33 @@ class TestUserEndpoints:
             '/users/register/', data=data,
             header={"Content-Type": "application/json"})
         assert response.status_code == 201
+
+
+    def test_get_user(self):
+        USERNAME = "test"
+        PASSWORD = "test"
+        
+        data = {
+            "username": USERNAME,
+            "first_name": "test",
+            "last_name": "test",
+            "password": PASSWORD 
+        }
+
+        api_client = APIClient()
+        user_response = api_client.post(
+            "/users/register/", 
+            data=data,
+            header={"Content-Type": "application/json"},
+            format='json'
+        )
+
+        user_token = api_client.post(
+            "/api/token/",
+            data = {
+                "username": USERNAME,
+                "password": PASSWORD
+            },
+            header={"Content-Type": "application/json"},
+            format="json"
+        )
