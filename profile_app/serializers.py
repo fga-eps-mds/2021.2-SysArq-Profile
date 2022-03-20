@@ -23,3 +23,10 @@ class GetUserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = User
         fields = ['first_name', 'last_name']
+
+
+class UserSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = User
+        fields = ('username', 'first_name', 'last_name', 'cpf', 'is_superuser')
