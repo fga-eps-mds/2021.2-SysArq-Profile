@@ -19,5 +19,6 @@ class GetUsersViewSet(viewsets.GenericViewSet, mixins.ListModelMixin):
 
 
 class UserDetail(generics.RetrieveUpdateDestroyAPIView):
+    permission_classes = [IsAuthenticated]
     queryset = User.objects.all()
     serializer_class = UserSerializer
