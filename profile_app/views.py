@@ -14,11 +14,13 @@ class CreateUserViewSet(viewsets.GenericViewSet, mixins.CreateModelMixin):
 
 class GetUsersViewSet(viewsets.GenericViewSet, mixins.ListModelMixin):
     permission_classes = [IsAuthenticated]
+    # permission_classes = [AllowAny]
     queryset = User.objects.all()
     serializer_class = GetUserSerializer
 
 
 class UserDetail(generics.RetrieveUpdateDestroyAPIView):
     permission_classes = [IsAuthenticated]
+    # permission_classes = [AllowAny]
     queryset = User.objects.all()
     serializer_class = UserSerializer
