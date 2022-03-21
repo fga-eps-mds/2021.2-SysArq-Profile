@@ -33,7 +33,7 @@ jobs:
           cat .env
 
       - name: Executar pytest  
-        run: sudo docker-compose run web pytest --cov
+        run: sudo docker-compose run web pytest
 
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
