@@ -4,7 +4,7 @@ from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin, BaseU
 
 class UserManager(BaseUserManager):
 
-    def create_superuser(self, username, first_name, last_name,
+    def create_superuser(self, username, user_type, first_name, last_name,
                          cpf, password, **other_fields):
 
         other_fields.setdefault('is_superuser', True)
