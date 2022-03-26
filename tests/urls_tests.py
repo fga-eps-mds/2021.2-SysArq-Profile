@@ -88,7 +88,7 @@ class TestDatabaseAccess:
     def test_create_superuser(self):
         new_user = User.objects.create_superuser(
             username='super',
-            user_type=User.User_Type.AD,
+            user_type='AD',
             password='super',
             first_name='super',
             last_name='super',
@@ -98,6 +98,7 @@ class TestDatabaseAccess:
         with pytest.raises(ValueError):
             # This fails since is_superuser cannot be false in create_superuser
             User.objects.create_superuser(username='super2',
+                                          user_type='AD',
                                           password='super2',
                                           first_name='super2',
                                           last_name='super2',
