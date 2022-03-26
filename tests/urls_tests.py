@@ -12,6 +12,7 @@ class TestUserEndpoints:
         load_dotenv()
         data = {
             "username": "test",
+            "user_type": "VI",
             "first_name": "test",
             "last_name": "test",
             "cpf": "11111111111",
@@ -30,6 +31,7 @@ class TestUserEndpoints:
             '/users/register/',
             data={
                 'username': 'superuser',
+                'user_type': "AD",
                 'password': 'superuser',
                 'cpf': '00000000000',
                 'is_superuser': 'true'
@@ -44,6 +46,7 @@ class TestUserEndpoints:
 
         data = {
             "username": USERNAME,
+            "user_type": "AD",
             "first_name": "test",
             "last_name": "test",
             "password": PASSWORD
@@ -85,6 +88,7 @@ class TestDatabaseAccess:
     def test_create_superuser(self):
         new_user = User.objects.create_superuser(
             username='super',
+            user_type=User.User_Type.AD,
             password='super',
             first_name='super',
             last_name='super',
