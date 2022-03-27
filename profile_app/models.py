@@ -31,14 +31,12 @@ class User(AbstractBaseUser, PermissionsMixin):
         AD = "AD", "Administrador"
         AL = "AL", "Alimentador"
         VI = "VI", "Visualizador"
-    
 
     username = models.CharField(max_length=150, unique=True)
     user_type = models.CharField(
         max_length=2,
-        choices=User_Type.choices, 
-        default=User_Type.VI, 
-        )
+        choices=User_Type.choices,
+        default=User_Type.VI)
     first_name = models.CharField(max_length=150, blank=True)
     last_name = models.CharField(max_length=150, blank=True)
     cpf = models.CharField(max_length=15, blank=True)
