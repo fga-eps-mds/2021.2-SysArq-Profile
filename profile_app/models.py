@@ -8,7 +8,6 @@ class UserManager(BaseUserManager):
                          cpf, password, **other_fields):
 
         other_fields.setdefault('is_superuser', True)
-        other_fields.setdefault('user_type', User.User_Type.AD)
 
         if other_fields.get('is_superuser') is not True:
             raise ValueError(

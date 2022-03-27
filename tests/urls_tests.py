@@ -88,7 +88,7 @@ class TestDatabaseAccess:
     def test_create_superuser(self):
         new_user = User.objects.create_superuser(
             username='super',
-            user_type=User.User_Type.AD,
+            user_type= User.User_Type.AD,
             password='super',
             first_name='super',
             last_name='super',
