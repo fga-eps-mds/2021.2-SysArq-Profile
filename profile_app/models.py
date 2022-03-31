@@ -30,7 +30,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     username = models.CharField(max_length=150, unique=True)
     first_name = models.CharField(max_length=150, blank=True)
     last_name = models.CharField(max_length=150, blank=True)
-    cpf = models.CharField(max_length=15, blank=True)
+    cpf = models.CharField(max_length=15, blank=True, primary_key=True)
     is_superuser = models.BooleanField(default=False)
 
     USERNAME_FIELD = 'username'
