@@ -5,7 +5,8 @@ import os
 def create_first_user(apps, _):
     User = apps.get_model('profile_app', 'User')
 
-    username,  password = os.getenv('FIRST_USER').split(' ')
+    username = os.getenv('FIRST_USERNAME')
+    password = os.getenv('FIRST_PASSWORD')
 
     u = User(
         username=username,

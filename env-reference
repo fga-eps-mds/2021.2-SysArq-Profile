@@ -5,9 +5,11 @@
 SECRET_KEY = YOUR_SECRET_KEY
 
 # usuario e senha para primeiro user, com o intuito de criar os outros usuarios
-# ex. FIRST_USER = ADMINADMIN 123456789
+# ex.   FIRST_USERNAME = NOMEUSUARIO 
+#       FIRST_PASSWORD = SENHAsenha
 # (para passar nas validacoes do frontend, o nome de usuario precisa ter ao menos 4 caracteres e a senha 9)
-FIRST_USER = NAME PASSWORD
+FIRST_USERNAME = NAME
+FIRST_PASSWORD = PASSWORD
 
 DEBUG=True
 

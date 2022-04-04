@@ -10,7 +10,8 @@ class TestUserEndpoints:
 
     @pytest.fixture
     def api_client(self):
-        admin_username, admin_password = os.getenv('FIRST_USER').split(' ')
+        admin_username = os.getenv('FIRST_USERNAME')
+        admin_password = os.getenv('FIRST_PASSWORD')
         api_client = APIClient()
 
         admin_token = api_client.post(
