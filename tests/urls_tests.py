@@ -14,7 +14,7 @@ class TestUserEndpoints:
         api_client = APIClient()
 
         admin_token = api_client.post(
-            '/api/token/', 
+            '/api/token/',
             data={
                 'username': admin_username,
                 'password': admin_password
