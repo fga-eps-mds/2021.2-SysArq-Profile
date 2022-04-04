@@ -26,6 +26,7 @@ jobs:
           touch .env
           echo SECRET_KEY=secret_key >> .env
           echo DEBUG=True >> .env
+          echo FIRST_USER=ADMINADMIN 123456789 >> .env
           echo POSTGRES_HOST=db >> .env
           echo POSTGRES_DB=postgres >> .env
           echo POSTGRES_USER=postgres >> .env
