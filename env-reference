@@ -4,6 +4,13 @@
 # python -c 'from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())'
 SECRET_KEY = YOUR_SECRET_KEY
 
+# usuario e senha para primeiro user, com o intuito de criar os outros usuarios
+# ex.   FIRST_USERNAME = NOMEUSUARIO 
+#       FIRST_PASSWORD = SENHAsenha
+# (para passar nas validacoes do frontend, o nome de usuario precisa ter ao menos 4 caracteres e a senha 9)
+FIRST_USERNAME = NAME
+FIRST_PASSWORD = PASSWORD
+
 DEBUG=True
 
 TEST_PASSWORD = ANY_STRING

@@ -8,7 +8,24 @@ import os
 @pytest.mark.django_db(transaction=False)
 class TestUserEndpoints:
 
-    def test_create(self):
+    @pytest.fixture
+    def api_client(self):
+        admin_username = os.getenv('FIRST_USERNAME')
+        admin_password = os.getenv('FIRST_PASSWORD')
+        api_client = APIClient()
+
+        admin_token = api_client.post(
+            '/api/token/',
+            data={
+                'username': admin_username,
+                'password': admin_password
+            },
+            format="json"
+        )
+        api_client.credentials(HTTP_AUTHORIZATION='JWT ' + admin_token.data["access"])
+        return api_client
+
+    def test_create(self, api_client):
         load_dotenv()
         data = {
             "username": "test",
@@ -19,14 +36,12 @@ class TestUserEndpoints:
             "password": os.getenv('POSTGRES_HOST')
         }
 
-        api_client = APIClient()
         response = api_client.post(
             '/users/register/', data=data,
             header={"Content-Type": "application/json"})
         assert response.status_code == 201
 
-    def test_create_superuser(self):
-        api_client = APIClient()
+    def test_create_superuser(self, api_client):
         response = api_client.post(
             '/users/register/',
             data={
@@ -40,7 +55,7 @@ class TestUserEndpoints:
         )
         assert response.status_code == 201
 
-    def test_get_user(self):
+    def test_get_user(self, api_client):
         USERNAME = "test"
         PASSWORD = "test"
 
@@ -52,7 +67,6 @@ class TestUserEndpoints:
             "password": PASSWORD
         }
 
-        api_client = APIClient()
         user_response = api_client.post(
             "/users/register/",
             data=data,
@@ -79,7 +93,7 @@ class TestUserEndpoints:
         )
 
         assert users_response.status_code == 200
-        assert users_response.data[0]["first_name"] == "test"
+        assert users_response.data[-1]["first_name"] == "test"
 
 
 @pytest.mark.django_db()
