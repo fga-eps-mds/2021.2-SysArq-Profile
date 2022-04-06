@@ -26,6 +26,8 @@ jobs:
           touch .env
           echo SECRET_KEY=secret_key >> .env
           echo DEBUG=True >> .env
+          echo FIRST_USERNAME=ADMINADMIN >> .env
+          echo FIRST_PASSWORD=123456789 >> .env
           echo POSTGRES_HOST=db >> .env
           echo POSTGRES_DB=postgres >> .env
           echo POSTGRES_USER=postgres >> .env
@@ -33,7 +35,7 @@ jobs:
           cat .env
 
       - name: Executar pytest  
-        run: sudo docker-compose run web pytest --cov --cov-report xml:./coverage.xml
+        run: sudo docker-compose run web pytest --cov-report xml:./coverage.xml
 
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
