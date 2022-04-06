@@ -4,6 +4,8 @@ from dotenv import load_dotenv
 from profile_app.models import User
 import os
 
+#
+
 
 @pytest.mark.django_db(transaction=False)
 class TestUserEndpoints:
