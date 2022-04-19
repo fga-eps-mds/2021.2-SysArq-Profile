@@ -4,8 +4,6 @@ from dotenv import load_dotenv
 from profile_app.models import User
 import os
 
-#
-
 
 @pytest.mark.django_db(transaction=False)
 class TestUserEndpoints:
@@ -34,8 +32,8 @@ class TestUserEndpoints:
             "user_type": "VI",
             "first_name": "test",
             "last_name": "test",
+            "password": os.getenv('POSTGRES_HOST'),
             "cpf": "11111111111",
-            "password": os.getenv('POSTGRES_HOST')
         }
 
         response = api_client.post(
@@ -49,8 +47,10 @@ class TestUserEndpoints:
             data={
                 'username': 'superuser',
                 'user_type': "AD",
+                'first_name': 'superuser',
+                'last_name': 'superuser',
                 'password': 'superuser',
-                'cpf': '00000000000',
+                'cpf': "00000000000",
                 'is_superuser': 'true'
             },
             format='json'
@@ -66,7 +66,8 @@ class TestUserEndpoints:
             "user_type": "AD",
             "first_name": "test",
             "last_name": "test",
-            "password": PASSWORD
+            "password": PASSWORD,
+            "cpf": "11111111111",
         }
 
         user_response = api_client.post(
