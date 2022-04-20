@@ -4,8 +4,10 @@ from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin, BaseU
 
 class UserManager(BaseUserManager):
 
-    def create_superuser(self, username, user_type, first_name, last_name,
-                         cpf, password, **other_fields):
+    def create_superuser(self, username, cpf, password, **other_fields):
+        user_type = "AD"
+        first_name = "super"
+        last_name = "user"
 
         other_fields.setdefault('is_superuser', True)
 
@@ -39,7 +41,7 @@ class User(AbstractBaseUser, PermissionsMixin):
         default=User_Type.VI)
     first_name = models.CharField(max_length=150, blank=True)
     last_name = models.CharField(max_length=150, blank=True)
-    cpf = models.CharField(max_length=15, blank=True)
+    cpf = models.CharField(max_length=15, blank=True, unique=True)
     is_superuser = models.BooleanField(default=False)
 
     USERNAME_FIELD = 'username'
