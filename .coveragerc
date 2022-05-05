@@ -1,6 +1,7 @@
 [run]
     source = .
     omit =
+        parser.py
         manage.py
         project/asgi.py
         project/wsgi.py
